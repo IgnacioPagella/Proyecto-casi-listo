@@ -27,9 +27,9 @@ public class Shot : MonoBehaviour
 
         }
 
-        planelife = GameObject.FindGameObjectWithTag("Player").GetComponent<Shot>();
+        //planelife = GameObject.FindGameObjectWithTag("Player").GetComponent<Shot>();
 
-        tamanio = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventar>();
+        //tamanio = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventar>();
 
 
         if (VidaAvioneta > 100 && Input.GetKey(KeyCode.Mouse0))
@@ -39,6 +39,7 @@ public class Shot : MonoBehaviour
 
             if (Time.time > shotRateTime)
             {
+                Debug.Log("Recibe Disparo");
                 GameObject newBullet;
                 newBullet = PhotonNetwork.Instantiate(bullet.name, spawnPoint.position, spawnPoint.rotation);
                 shotRateTime = Time.time + shotRate;
@@ -46,7 +47,7 @@ public class Shot : MonoBehaviour
                 transform.localScale -= new Vector3(x: 0.05f, y: 0f, z: 0.05f);
 
 
-                planelife.VidaAvioneta = planelife.VidaAvioneta - 1;
+                VidaAvioneta = VidaAvioneta - 1;
 
                 tamanio.tamaño -= 1;
 
