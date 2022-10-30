@@ -24,7 +24,7 @@ public class Shot : MonoBehaviour
         if (VidaAvioneta <= 0)
         {
             Destroy(gameObject);
-
+            PhotonNetwork.LoadLevel("Game");
         }
 
         //planelife = GameObject.FindGameObjectWithTag("Player").GetComponent<Shot>();
@@ -52,8 +52,6 @@ public class Shot : MonoBehaviour
                 tamanio.tamaño -= 1;
 
             }
-
-
 
         }
     }
