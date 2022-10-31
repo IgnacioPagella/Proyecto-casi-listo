@@ -20,15 +20,15 @@ public class Playersiguecam : MonoBehaviourPunCallbacks
             cam.GetComponent<CameraPlayerFollow>().player = transform;
             //planecollider = GameObject.Find("Plane").GetComponent<Collider>();
         }
-        
+
 
     }
 
 
     void Update()
     {
-        
-        
+
+
         ray = cam.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit))
