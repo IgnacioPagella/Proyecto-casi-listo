@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
+<<<<<<< Updated upstream:Assets/Scenes/Game.unity
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+>>>>>>> Stashed changes:Assets/Scenes/SampleScene.unity
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1010,11 +1014,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plane
       objectReference: {fileID: 0}
-    - target: {fileID: 2089323501590668932, guid: 4b2d36e4a823407448d05d0261ce2927,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2089323501590668954, guid: 4b2d36e4a823407448d05d0261ce2927,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1120,6 +1119,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Scenes/Game.unity
     - target: {fileID: 2089323501590668955, guid: 4b2d36e4a823407448d05d0261ce2927,
         type: 3}
       propertyPath: m_Enabled
@@ -1160,5 +1160,7 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> Stashed changes:Assets/Scenes/SampleScene.unity
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2d36e4a823407448d05d0261ce2927, type: 3}

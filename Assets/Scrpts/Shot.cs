@@ -24,7 +24,7 @@ public class Shot : MonoBehaviour
         if (VidaAvioneta <= 0)
         {
             Destroy(gameObject);
-            PhotonNetwork.LoadLevel("Game");
+            PhotonNetwork.LoadLevel("Lobby");
         }
 
         //planelife = GameObject.FindGameObjectWithTag("Player").GetComponent<Shot>();
@@ -44,6 +44,7 @@ public class Shot : MonoBehaviour
                 newBullet = PhotonNetwork.Instantiate(bullet.name, spawnPoint.position, spawnPoint.rotation);
                 shotRateTime = Time.time + shotRate;
 
+                
                 transform.localScale -= new Vector3(x: 0.05f, y: 0f, z: 0.05f);
 
 
