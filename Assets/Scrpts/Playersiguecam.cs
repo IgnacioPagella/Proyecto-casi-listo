@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
+
 
 public class Playersiguecam : MonoBehaviour
 {
@@ -12,18 +14,18 @@ public class Playersiguecam : MonoBehaviour
 
     void Start()
     {
-        cam = Camera.main;
-        planecollider = GameObject.Find("Plane").GetComponent<Collider>();
+        if (photonView.IsMine == true)
+        {
+            cam = Camera.main;
+            planecollider = GameObject.Find("Plane").GetComponent<Collider>();
+        }
+
     }
 
 
     void Update()
     {
-        // transform.position = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5));
-
-        //if (Input.GetMouseButton(1))
-        //{
-
+      
         
         ray = cam.ScreenPointToRay(Input.mousePosition);
 
