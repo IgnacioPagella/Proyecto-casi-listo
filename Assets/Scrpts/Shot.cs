@@ -6,17 +6,25 @@ using Photon.Pun;
 public class Shot : MonoBehaviour
 {
     public GameObject bullet;
+    public AudioSource SonidoDisparo;
+    public AudioClip clip;
 
     public Transform spawnPoint;
 
     public float shotRate = 0.5f;
 
     private float shotRateTime = 0;
+    
 
     Shot planelife;
 
     Inventar tamanio;
+    void Start()
+    {
 
+        
+
+    }
     public int VidaAvioneta = 0;
 
     void Update()
@@ -38,13 +46,15 @@ public class Shot : MonoBehaviour
         if (VidaAvioneta > 100 && Input.GetKey(KeyCode.Mouse0))
         {
 
-
-
+         
+           
             if (Time.time > shotRateTime)
             {
                 GameObject newBullet;
                 newBullet = PhotonNetwork.Instantiate(bullet.name, spawnPoint.position, spawnPoint.rotation);
                 shotRateTime = Time.time + shotRate;
+
+                SonidoDisparo.PlayOneShot(clip);
 
                 transform.localScale -= new Vector3(x: 0.05f, y: 0f, z: 0.05f);
 
@@ -54,11 +64,10 @@ public class Shot : MonoBehaviour
                 tamanio.tamaño -= 1;
 
             }
-
-
-
+           
         }
     }
+   
 }
 
 
